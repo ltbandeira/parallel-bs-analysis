@@ -8,7 +8,7 @@ void bs(int n, int * vetor)
 {
     int c=0, d, troca, trocou =1;
 
-    while (c < (n-1) & trocou )
+    while ((c < (n-1)) & trocou )
         {
         trocou = 0;
         for (d = 0 ; d < n - c - 1; d++)
@@ -35,7 +35,8 @@ int main()
     #ifdef DEBUG
     printf("\nVetor: ");
     for (i=0 ; i<ARRAY_SIZE; i++)              /* print unsorted array */
-        printf("[%03d] ", vetor[i]);
+        printf("[%03d]", vetor[i]);
+    printf("\n");
     #endif
 
     bs(ARRAY_SIZE, vetor);                     /* sort array */
@@ -45,6 +46,7 @@ int main()
     printf("\nVetor: ");
     for (i=0 ; i<ARRAY_SIZE; i++)                              /* print sorted array */
         printf("[%03d] ", vetor[i]);
+    printf("\n");
     #endif
 
     return 0;
